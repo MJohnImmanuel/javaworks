@@ -1,0 +1,320 @@
+body{
+    margin: -15px;
+    padding: 0;
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/* nav bar start  */
+nav{
+    background-color: white;
+    padding: 1rem;
+    width: 100%;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-evenly;
+}
+nav ul img{
+    height: 50px;
+
+}
+nav ul li{
+    display: inline;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+nav ul li a:hover{
+    color: white;
+    background-color: #575757;
+    transition: 0.45s;
+    border-radius: 5px;
+}
+nav input{
+    padding: 0.5rem 0.2rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    outline: none;
+}
+nav input::placeholder{
+    color:black;
+}
+.btn{
+    padding: 0.5rem 1rem;
+    color: black;
+    border: none;
+    transition: 0.45s;
+}
+.btn:hover{
+    background-color: #575757;
+    color: white;
+}
+.product{
+    font-family: "Bodoni Moda SC", serif;
+    background-color: #C72464;
+    color: white;
+    position: relative;
+    text-align: center;
+    border-radius: 0px 30px 30px 38px ;
+    width: 100%;
+}
+.offcanvas-body hr{
+    width: 110%;
+}
+.range-slider {
+    width: 300px;
+    text-align: center;
+    position: relative;
+    margin-left: 5%;
+}
+.range-slider .rangeValues {
+    width: 300px;
+    position: relative;
+    display: block;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-left: 5%;
+    text-align: center;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    appearance: none;
+    width: 100px;
+    height: 5px;
+    background: white;
+    border: none;
+    border-radius: 3px;
+    align-items: center;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background: none;
+    margin-top: -6px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: white;
+}
+#SubBtn{
+    border: none;
+    background: none;
+    border-radius: 5px;
+    color: black;
+    height: 40px;
+    width: 20%;
+    text-align: center;
+}
+#SubBtn:hover{
+    background-color: #C72464;
+    transition: 0.45s;
+}
+.range{
+    display: flex;
+}
+.filter_buttons hr{
+    width: 100%;
+}
+.filter_buttons button{
+    margin-top: 5%;
+    border: none;
+    margin-bottom: 5%;
+    height: 40px;
+    width: 23%;
+    color: black;
+    background: none;
+    border-radius: 5px;
+    font-family: "Playfair Display", serif;
+}
+.filter_buttons .active:hover{
+    background-color: #C72464;
+    transition: 0.45s;
+}
+.size p{
+    margin-top: 5%;
+}
+.size hr{
+    width: 100%;
+}
+.form input{
+    display: inline-block;
+    width: 110px;
+    border-radius: 5px;
+    font-family: "Playfair Display", serif;
+}
+.form hr{
+    width: 100%;
+}
+/* checkbox   */
+.cyberpunk-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #C72464;
+    border-radius: 5px;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+  
+.cyberpunk-checkbox:before {
+    content: "";
+    background-color: #FF6D00;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+  
+.cyberpunk-checkbox:checked:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+  
+.cyberpunk-checkbox-label {
+    font-size: 20px;
+    color: black;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+}
+/* nav bar end  */
+.card-container{
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    padding: 10px 5px;
+    margin: -0.10px;
+    justify-content: space-evenly;
+}
+.card .hide{
+    display: none;
+}
+.card{
+    width: 300px;
+    height: auto;
+    background-color: transparent;
+    border-radius:  0px 0px 38px 38px;;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+}
+.card img{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+    cursor:pointer;
+    transition: 0.7s;
+    padding: 10px;
+    border-radius: 0px 0px 38px 38px;
+}
+.card-content h5{
+    text-align: center;
+    font-size: 30px;
+    color: #C72464;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+} 
+.card-content h4{
+    text-align: center;
+    font-size: 25px;
+    color:#FF6D00;
+}
+
+.radio-inputs {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: none;
+    margin-left: 2%;
+    padding: 0.25rem;
+    width: 280px;
+    font-size: 14px;
+  }
+  
+  .radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  .radio-inputs .radio input {
+    display: none;
+  }
+  
+  .radio-inputs .radio .name {
+    display: flex;
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border: none;
+    padding: .5rem 0;
+    color: #C72464;
+    transition: all .15s ease-in-out;
+  }
+  
+  .radio-inputs .radio input:checked + .name {
+    background-color: #371800;
+    color: #FF6D00;
+    font-weight: 600;
+}
+.radio-inputs .radio :hover{
+    background-color: #C72464;
+    color: black;
+}
+.addtocart {
+    width: 100%;
+    margin-top: 19px;
+    padding: 15px;
+    border: none;
+    border-top: 2px solid #C72464;
+    background-color: transparent;
+    color: #C72464;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 0px 0px 38px 38px;
+    transition: 0.2s;
+}
+  
+.addtocart:hover {
+    background-color: #C72464;
+    border-top: 2px solid transparent;
+    color: #111111;
+}

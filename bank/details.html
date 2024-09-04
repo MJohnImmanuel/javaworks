@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+BE+VLG:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+CZ:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Details</title>
+    <style>
+        body{
+            background-image: url("./image/3.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <!-- Account popup start  -->
+<div class="container">
+    <div id="pinPopup" class="popup-container" style="display: none; z-index: 999;">
+        <div class="popup-card" >
+            <span id="closePopupBtn" class="close-btn">&times;</span>
+            <p>Please enter the 4-digit PIN </p>
+         
+                <input type="text" id="pinInput" maxlength="4" required />
+                <button id="openPopupBtn">Verify</button>
+            
+        </div>
+    </div>
+</div>
+<!-- Account popup end  -->
+
+<!-- Credit popup start  -->
+<div class="container">
+    <div id="pinPopup1" class="popup-container" style="display: none; z-index: 999;">
+        <div class="popup-card" >
+            <span id="closePopupBtn" class="close-btn">&times;</span>
+            <p>Please enter the 4-digit PIN </p>
+         
+                <input type="text" id="pinInput1" maxlength="4" required />
+                <button id="openPopupBtn1">Verify</button>
+            
+        </div>
+    </div>
+</div>
+<!-- Credit popup end  -->
+
+<!-- Debit popup start  -->
+<div class="container">
+    <div id="pinPopup2" class="popup-container" style="display: none; z-index: 999;">
+        <div class="popup-card" >
+            <span id="closePopupBtn" class="close-btn">&times;</span>
+            <p>Please enter the 4-digit PIN </p>
+         
+                <input type="text" id="pinInput2" maxlength="4" required />
+                <button id="openPopupBtn2">Verify</button>
+            
+        </div>
+    </div>
+</div>
+<!-- Debit popup end  -->
+
+
+    <div class="container">
+        <a href="../index.html"><button id="bnt"><i class="fa-solid fa-arrow-left fa-xl"></button></i></a>
+        <div class="row" style="display: flex; justify-content: space-evenly;">
+            <div class="col-sm-4" style="border-radius: 10px; width: 25%; text-align: center; height: 250px; margin-top: 10%;background: radial-gradient(circle 210px at 0% 0%, #ffffff, #292828); box-shadow: 17px 6px 30px -1px #323232;">
+                <div id="cre">
+                <a id="acountpopup"><h2> Account Details</h2></a>
+                </div>
+            </div>
+            <div class="col-sm-4 border" style="border-radius: 10px; width: 25%; text-align: center; height: 250px; margin-top: 10%; background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%); box-shadow: 17px 6px 30px -1px #323232;">
+                <div id="cre">
+                <a id="creditpopup" ><h2>Credit</h2></a>
+                </div>
+            </div>
+            
+            <div class="col-sm-4" style="border-radius: 10px; width: 25%; text-align: center; height: 250px; margin-top: 10%;background: radial-gradient(circle 250px at 100% 0%, #eee, #333); box-shadow: 17px 6px 30px -1px #323232;">
+                <div id="cre">
+                <a id="debitpopup"><h2>Debit</h2></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+          // Account popup start 
+       document.addEventListener('DOMContentLoaded', () => {
+            
+       let openPopupBtn = document.querySelector("#openPopupBtn");
+            const popup = document.querySelector('#pinPopup');
+            const acountpopup=document.querySelector('#acountpopup');
+         
+
+    // Function to open the popup
+            acountpopup.addEventListener('click', () => {
+            popup.style.display = 'block';
+        });
+        
+    // Function to close the popup
+       // closePopupBtn.addEventListener('click', () => {
+         //   popup.style.display = 'none';
+        //});
+      
+
+      
+      openPopupBtn.addEventListener('click', () => {
+        let correctPin = "1234";
+        let  pin = document.getElementById("pinInput").value;
+        let redirect 
+         if (correctPin=== pin) {
+           window.location.href= "account.html";
+        } 
+        }) ; 
+    });
+
+    // account popup end 
+
+    // Credit popup start 
+    document.addEventListener('DOMContentLoaded', () => {
+            
+            let openPopupBtn1 = document.querySelector("#openPopupBtn1");
+                 const popup1 = document.querySelector('#pinPopup1');
+                 const creditpopup=document.querySelector('#creditpopup');
+              
+     
+         // Function to open the popup
+                creditpopup.addEventListener('click', () => {
+                 popup1.style.display = 'block';
+             });
+             
+         // Function to close the popup
+            // closePopupBtn.addEventListener('click', () => {
+              //   popup.style.display = 'none';
+             //});
+           
+     
+           
+           openPopupBtn1.addEventListener('click', () => {
+             let correctPin1 = "1234";
+             let  pin1 = document.getElementById("pinInput1").value;
+              if (correctPin1=== pin1) {
+                window.location.href= "credit.html";
+             } 
+             }) ; 
+         });
+    //  Credit popup end  
+    
+    // Debit popup start 
+
+    document.addEventListener('DOMContentLoaded', () => {
+            
+            let openPopupBtn2 = document.querySelector("#openPopupBtn2");
+                 const popup2 = document.querySelector('#pinPopup2');
+                 const debitpopup=document.querySelector('#debitpopup');
+              
+     
+         // Function to open the popup
+         debitpopup.addEventListener('click', () => {
+                 popup2.style.display = 'block';
+             });
+             
+         // Function to close the popup
+            // closePopupBtn.addEventListener('click', () => {
+              //   popup.style.display = 'none';
+             //});
+           
+     
+           
+           openPopupBtn2.addEventListener('click', () => {
+             let correctPin2 = "1234";
+             let  pin2 = document.getElementById("pinInput2").value;
+              if (correctPin2=== pin2) {
+                window.location.href= "Debit.html";
+             } 
+             }) ; 
+         });
+
+        
+    </script>
+
+</body>
+</html>

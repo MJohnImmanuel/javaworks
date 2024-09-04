@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <style>
+        body{
+    background-image: url("./2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10%;
+  }
+  
+  .cards .red {
+    background-color:transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid darkgoldenrod;
+    border-radius: 30px;
+  }
+  
+  .cards .blue {
+    background-color:transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid darkgoldenrod;
+    border-radius: 30px;
+  }
+  
+  .cards .green {
+    background-color:transparent;
+    backdrop-filter: blur(10px);
+  }
+  
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+    margin-top: 10%;
+  }
+  .cards a{
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 30px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+  }
+  .cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  .cards .card p.second-text {
+    font-size: .7em;
+  }
+  
+  .cards .card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
+    </style>
+</head>
+<body>
+<div class="cards">
+    <div class="card red">
+        <p class="tip"><a href="./bank/details.html"> Banking</a></p>
+    </div>
+    <div class="card blue">
+        <p class="tip"><a href="./shopping/index.html">Shopping</a></p>
+    </div>
+    
+</div>
+</body>
+</html>
